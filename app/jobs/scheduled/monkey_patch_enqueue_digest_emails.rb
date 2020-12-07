@@ -2,7 +2,7 @@
 
 module Jobs
   EnqueueDigestEmails.class_eval do
-    every 30.mins
+    every 30.min
 
     def execute(args)
       return if SiteSetting.disable_digest_emails? || SiteSetting.private_email? || SiteSetting.disable_emails == "yes"
