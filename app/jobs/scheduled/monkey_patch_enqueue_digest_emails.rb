@@ -33,8 +33,6 @@ module Jobs
       # If the site requires approval, make sure the user is approved
       query = query.where("approved OR moderator OR admin") if SiteSetting.must_approve_users?
 
-      query = query.shuffle
-
       query = query.limit(GlobalSetting.max_digests_enqueued_per_30_mins_per_site)
 
       query.pluck(:id)
