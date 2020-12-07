@@ -2,7 +2,7 @@
 
 module Jobs
   EnqueueDigestEmails.class_eval do
-    every 120.minutes
+    every 2.hours
 
     def execute(args)
       return if SiteSetting.disable_digest_emails? || SiteSetting.private_email? || SiteSetting.disable_emails == "yes"
@@ -32,7 +32,7 @@ module Jobs
 
       # If the site requires approval, make sure the user is approved
       query = query.where("approved OR moderator OR admin") if SiteSetting.must_approve_users?
-
+      Discourse.warn(">>> NEO JOBS MONKEY PATCH >>> query.count #{query.count}")
       query = query.limit(GlobalSetting.max_digests_enqueued_per_30_mins_per_site)
 
       query.pluck(:id)
