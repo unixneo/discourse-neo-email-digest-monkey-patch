@@ -2,7 +2,7 @@
 
 # name: discourse-neo-email-digest-monkey-patch
 # about: change default behavior of email digests job scheduler
-# version: 0.0.6
+# version: 0.0.7
 # date: 7 December 2020
 # authors: Neo
 # url: https://github.com/unixneo/discourse-neo-email-digest-monkey-patch
