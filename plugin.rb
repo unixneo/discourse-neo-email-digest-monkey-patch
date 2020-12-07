@@ -2,10 +2,10 @@
 
 # name: discourse-neo-email-digest-monkey-patch
 # about: change default behavior of email digests job scheduler
-# version: 0.0.4
-# date: 30 Nov 2020
+# version: 0.0.5
+# date: 7 December 2020
 # authors: Neo
-# url: https://github.com/unixneo/
+# url: https://github.com/unixneo/discourse-neo-email-digest-monkey-patch
 
 PLUGIN_NAME = "discourse-neo-email-digest-monkey-patch"
 
